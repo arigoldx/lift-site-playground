@@ -53,9 +53,9 @@ header:before {
   height: 100%;
   margin-left: -3250px;
 
-  background: #79246B url("/images/background-1x.png") repeat;
-  background: #79246B -webkit-image-set(url("/images/background-1x.png") 1x,
-                                        url("/images/background-2x.png") 2x) repeat;
+  background: #79246B url("./images/background-1x.png") repeat;
+  background: #79246B -webkit-image-set(url("./images/background-1x.png") 1x,
+                                        url("./images/background-2x.png") 2x) repeat;
 }
 
 h1 {
