@@ -1,0 +1,539 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/stylesheets/fonts/fontawesome-webfont.eot?v=3.0.1');
+  src: url('/stylesheets/fonts/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('/stylesheets/fonts/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('/stylesheets/fonts/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Norwester is used under the Open Font License; see
+ * /stylesheets/fonts/norwester-license.txt.
+ *
+ * Norwester was designed by Jamie Wilson (http://jamiewilson.io).
+ */
+@font-face {
+  font-family: 'Norwester';
+  src: url('/stylesheets/fonts/norwester.eot?v=1.2');
+  src: url('/stylesheets/fonts/norwester.eot?#iefix&v=1.2') format('embedded-opentype'),
+    url('/stylesheets/fonts/norwester.woff?v=1.2') format('woff'),
+    url('/stylesheets/fonts/norwester.ttf?v=1.2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+//  min-height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  text-align: center;
+}
+
+header {
+  background: url("../images/background-1x.png") repeat;
+  background: -webkit-image-set(url("../images/background-1x.png") 1x,
+                                        url("../images/background-2x.png") 2x) repeat;
+
+//  position: relative;
+
+//  width: 1300px;
+//  margin: 0 auto;
+}
+
+header:before {
+//  position: absolute;
+//  z-index: -1; /* sit below other elements */
+//
+//  content: '';
+//
+//  width: 8000px;
+//  height: 100%;
+//  margin-left: -3250px;
+//
+}
+
+h1 {
+  display: inline-block;
+  width: 103px;
+  height: 93px;
+
+  font-size: 0;
+
+  background: transparent url("../images/logo-1x.png") no-repeat;
+  background: transparent -webkit-image-set(url("../images/logo-1x.png") 1x,
+                                            url("../images/logo-2x.png") 2x) no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    float: left;
+  }
+
+  header {
+    padding-top: 20px;
+    padding-left: 40px;
+  }
+}
+
+#main-nav {
+  list-style-type: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #main-nav {
+    display: inline-block;
+    padding-top: 45px;
+    font-size: 0.875rem;
+  }
+
+  #main-nav ul {
+    list-style-type: none;
+    
+    text-align: left;
+  }
+
+  #main-nav li {
+    display: inline-block;
+
+//    padding-right: 45px;
+  }
+
+  #main-nav #github {
+    float: right;
+  }
+
+  #main-nav #github > a {
+    color: #CAA3C3;
+  }
+
+  #main-nav #github:before {
+    content: '';
+    
+    display: inline-block;
+    margin-top: -6px;
+    position: relative;
+    top: 3px;
+
+//    background: transparent url("/images/logos/github-1x.png") no-repeat;
+//    background: transparent -webkit-image-set(url("/images/logos/github-1x.png") 1x,
+//                                            url("/images/logo-s/github2x.png") 2x) no-repeat;
+
+    //  width: 21px;
+    height: 21px;
+
+    padding-right: 10px;
+  }
+
+  #main-nav a {
+    color: #E6D6E3;
+    font-weight: 600;
+
+    text-decoration: none;
+  }
+
+  #main-nav a:hover {
+    text-decoration: underline;
+  }
+}
+
+h2 {
+  color: white;
+
+  font-family: 'Norwester', Arial, sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: normal;
+
+//  margin: 120px 0 0;
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+
+h3 {
+  color: #E3B9DA;
+
+  font-size: 1.875rem;
+  font-weight: 400;
+
+  margin: 0;
+}
+
+ul.introductory-links {
+  list-style-type: none;
+
+  text-align: center;
+
+  padding: 30px 0 80px;
+}
+
+ul.introductory-links > li {
+  display: inline-block;
+}
+
+ul.introductory-links a {
+  display: inline-block;
+
+  box-sizing: border-box;
+  height: 50px;
+  width: 189px;
+  padding: 16px 0 13px;
+
+  font-family: 'Norwester', Arial, sans-serif;
+  font-size: 1.1875rem;
+  text-transform: uppercase;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+}
+
+ul.introductory-links .getting-started {
+  background: #E9CCE4;
+  color: #475A6C;
+
+  margin-right: 25px;
+}
+
+ul.introductory-links .documentation {
+  border: 1px solid #E9CCE4;
+  color: #E9CCE4;
+}
+
+/* Background of the next chunk, which is really four sections. */
+header:after {
+//  position: absolute;
+  top: 100%;
+  z-index: -1; /* sit below following elements */
+
+  content: '';
+
+//  width: 8000px;
+//  margin-left: -3800px;
+  height: 515px;
+
+  background: #DBE3EA;
+}
+
+section.information {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: top;
+
+  box-sizing: border-box;
+  width: 250px;
+  height: 348px;
+
+  padding: 125px 28px 0 36px;
+  padding-top: 125px;
+
+  background: white;
+  box-shadow: 3px 3px 0px 0px #9DB2C6;
+
+  color: #546779;
+  font-size: 0.8125rem;
+  text-align: left;
+
+  margin-right: 35px;
+  margin-top: 60px;
+}
+
+section.information:before {
+//  position: absolute;
+  top: 50px;
+  left: 85px;
+
+  text-align: center;
+  font-family: 'FontAwesome';
+  font-size: 46px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+
+//  width: 77px;
+  height: 77px;
+  line-height: 80px;
+  border-radius: 77px;
+
+  background: #EB646A;
+  color: white;
+}
+
+section.information > a {
+//  position: absolute;
+  bottom: -24px;
+  left: 57px;
+
+  box-sizing: border-box;
+//  width: 141px;
+  padding-top: 15px;
+  height: 48px;
+
+  background: #79246B;
+  color: white;
+
+  font-family: Norwester, Arial, sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: 5px;
+}
+
+#secure:before {
+  content: '\F0c1';
+
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+#comet-ajax:before {
+  content: '\F0D0';
+}
+
+#view-first:before {
+  content: '\F06E';
+
+  line-height: 75px;
+}
+
+#scalable {
+  margin-right: 0;
+}
+
+#scalable:before {
+  content: '\F065';
+}
+
+h4 {
+  font-family: Norwester, Arial, sans-serif;
+  font-size: 1.375rem;
+  font-weight: normal;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-bottom: 0;
+}
+
+section.information > p {
+  margin-top: 10px;
+}
+
+#testimonials {
+  margin: 90px auto 0;
+//  width: 1300px;
+
+  padding: 0 65px 0;
+}
+
+#testimonials > h4 {
+  padding-top: 50px;
+
+  color: #79246B;
+  font-size: 2.375rem;
+}
+
+#testimonials > p {
+  color: #546779;
+  font-size: 1.375rem;
+
+//  width: 684px;
+  margin: 14px auto 0;
+}
+
+#testimonials > .logo {
+  float: left;
+
+  margin-top: 80px;
+  margin-left: 145px;
+}
+
+#testimonials > blockquote {
+  margin-top: 65px;
+  margin-left: 465px;
+
+//  width: 503px;
+
+  color: #546779;
+  font-size: 1.125rem;
+  text-align: left;
+}
+
+#testimonials > blockquote:before, #testimonials > blockquote:after {
+  display: inline-block;
+
+  font-family: 'Open Sans';
+  font-size: 43px;
+  line-height: 20px;
+  color: #79246B;
+}
+
+#testimonials > blockquote:before {
+  margin-left: -14px;
+
+  position: relative;
+  left: -2px;
+  top: 5px;
+
+  content: '\201C';
+}
+
+#testimonials > blockquote:after {
+  position: relative;
+  right: 1px;
+  top: 8px;
+
+  content: '\201D';
+}
+
+#testimonials > ul.logos {
+  margin: 40px 0 0;
+
+  border-top: 2px solid #9DB2C6;
+
+  padding: 35px 95px 65px;
+
+  list-style-type: none;
+}
+
+#testimonials li {
+  display: inline-block;
+
+  margin-right: 60px;
+}
+
+#testimonials .logos a {
+  display: table-cell;
+
+  vertical-align: middle;
+
+  background: #9DB2C6;
+  padding: 5px 10px;
+//  width: 198px;
+  height: 55px;
+}
+
+#testimonials .logos .logo {
+  display: inline-block;
+  vertical-align: middle;
+
+//  max-width: 198px;
+  max-height: 55px;
+}
+
+#testimonials #banno a, #testimonials #sketchboard a {
+  background: transparent;
+}
+
+#testimonials #sketchboard {
+  margin-right: 0;
+}
+
+footer {
+  position: relative;
+
+  margin: 0 auto;
+//  width: 1300px;
+  padding-bottom: 120px;
+
+  background: #9DB2C6;
+
+  text-align: right;
+}
+
+footer:before {
+//  position: absolute;
+  top: 0;
+  z-index: -1; /* sit below following elements */
+
+  content: '';
+
+//  width: 8000px;
+//  margin-left: -3800px;
+  height: 100%;
+
+  background: #9DB2C6;
+}
+
+footer .download {
+//  position: absolute;
+  top: 50px;
+  left: 135px;
+
+//  width: 88px;
+  padding-top: 100px;
+
+  font-family: Norwester, Arial, sans-serif;
+  color: #475A6C;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  background: transparent url("/images/dark-logo-1x.png") no-repeat;
+  background: transparent -webkit-image-set(url("/images/dark-logo-1x.png") 1x,
+                                            url("/images/dark-logo-2x.png") 2x) no-repeat;
+}
+
+div.link-group {
+//  display: inline-block;
+  vertical-align: top;
+
+  text-align: left;
+
+//  min-width: 350px;
+  margin-right: 10px;
+}
+
+h5 {
+  margin: 50px 0 15px;
+
+  font-family: Norwester, Arial, sans-serif;
+  font-size: 1.3125rem;
+  font-weight: normal;
+  color: #546779;
+  text-transform: uppercase;
+}
+
+div.link-group > ul {
+  font-size: 0.8125rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  display: inline-block;
+  -webkit-columns: 175px;
+  -moz-columns: 175px;
+  columns: 132px;
+  column-gap: 40px;
+
+  max-height: 66px;
+}
+
+div.link-group a {
+  color: #495D70;
+  text-decoration: none;
+
+  line-height: 1.375rem;
+}
+
+#contribute-links {
+  margin-right: 0;
+}
